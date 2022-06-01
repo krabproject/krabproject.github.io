@@ -3,12 +3,13 @@
 <head>
 <script>
 function validateForm() {
-  let x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
+  let input = document.forms["myForm"]["fname"].value;
+  if (input == "") {
     alert("Name must be filled out");
     return false;
+  } else {
+    alert(input);
   }
-  alert(x);
 }
 </script>
 </head>
