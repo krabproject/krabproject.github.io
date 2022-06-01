@@ -8,7 +8,13 @@ function validateForm() {
     alert("\n");
     return false;
   } else {
-    console.log("no refresh")
+    event.preventDefault();
+
+    var tag = document.createElement("p");
+    var text = document.createTextNode(input); 
+    tag.appendChild(text);
+    var element = document.getElementsByTagName("body")[0];
+    element.appendChild(tag);
   }
 }
 </script>
@@ -17,10 +23,9 @@ function validateForm() {
 
 <h2>JavaScript Validation</h2>
 
-<form name='myForm' onsubmit='validateForm()' method='GET'>
+<form name='myForm' onsubmit='return validateForm()' method='get'>
   Name: <input type='text' name='cmd'>
   <button onclick="validateForm()">submit</button>
 </form>
-<p id="yes"></p>
 </body>
 </html>
