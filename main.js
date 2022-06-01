@@ -1,10 +1,9 @@
 function validateForm() {
     var input = document.forms["myForm"]["cmd"].value;
     if (input == "") {
-      alert("\n");
+      alert("no");
       return false;
     } else {
-      event.preventDefault();
       const tag = document.createElement("p");
       const text = document.createTextNode(input); 
       tag.appendChild(text);

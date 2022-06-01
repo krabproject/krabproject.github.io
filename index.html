@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="./main.js"></script>
+<script>
+    function validateForm() {
+    var input = document.forms["myForm"]["cmd"].value;
+    if (input == "") {
+      alert("no");
+      return false;
+    } else {
+      event.preventDefault();
+      const tag = document.createElement("p");
+      const text = document.createTextNode(input); 
+      tag.appendChild(text);
+      var element = document.getElementsByTagName("body")[0];
+      element.appendChild(tag);
+      document.querySelector('input').value=''
+    }
+  }
+</script>
 </head>
 <body>
 <h2>Kommand Shell</h2>
 <form name='myForm' method='get'>
-  <br>
-  <label>Enter "help" for a list of commands</label>
   <input type='text' name='cmd'>
   <button onclick="return validateForm()">submit</button>
 </form>
