@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
+<script src="./main.js">
 function validateForm() {
   var input = document.forms["myForm"]["cmd"].value;
   if (input == "") {
@@ -14,7 +14,7 @@ function validateForm() {
     tag.appendChild(text);
     var element = document.getElementsByTagName("body")[0];
     element.appendChild(tag);
-    const firstNameInput = document.getElementsByTagName("input").innerHTML = "";
+    document.querySelector('input').value=''
   }
 }
 </script>
@@ -23,9 +23,9 @@ function validateForm() {
 
 <h2>JavaScript Validation</h2>
 
-<form name='myForm' onsubmit='return validateForm()' method='get'>
+<form name='myForm' method='get'>
   Name: <input type='text' name='cmd'>
-  <button onclick="validateForm()">submit</button>
+  <button onclick="return validateForm()">submit</button>
 </form>
 </body>
 </html>
