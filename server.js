@@ -2,7 +2,13 @@ const express = require('express');
 const fs = require("fs");
 
 const app = express();
-const data = fs.readFile(__dirname + "/index.html");
+const data = fs.readFile(__dirname + "/index.html", 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
+});
 
 app.get('/', (req, res) => {
   res.send(data);
