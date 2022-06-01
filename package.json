@@ -1,6 +1,9 @@
 {
   "name": "nodeshelljs.github.io",
   "version": "1.0.0",
+  "nodemonConfig": {
+    "ext": "js,html"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
