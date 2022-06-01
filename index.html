@@ -1,6 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        body {
+	 background-color: black;
+	 background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+	 height: 100vh;
+	 margin: 0;
+	 overflow: hidden;
+	 padding: 2rem;
+	 color: white;
+	 font: 1.3rem Inconsolata, monospace;
+	 text-shadow: 0 0 5px #c8c8c8;
+}
+
+body:hover {
+    cursor: text;
+}
+
+ body::after {
+	 content: "";
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100vw;
+	 height: 100vh;
+	 background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+	 pointer-events: none;
+}
+ ::selection {
+	 background: #0080ff;
+	 text-shadow: none;
+}
+ pre {
+     font-size: smaller;
+     align-self: left;
+}
+input {
+  font-family: inherit;
+  font-size: inherit;
+  font-size: inherit;
+  color: rgb(240, 191, 129);
+  background: transparent;
+  border: 0px;
+  outline: none; /* no highlight on focus */
+  width: 100%;
+}
+
+button {
+    opacity: 0;
+}
+    </style>
 <script>
     function validateForm() {
     var input = document.forms["myForm"]["cmd"].value;
@@ -15,15 +65,24 @@
       var element = document.getElementsByTagName("body")[0];
       element.appendChild(tag);
       document.querySelector('input').value=''
+      event.preventDefault();
     }
   }
 </script>
 </head>
 <body>
-<h2>Kommand Shell</h2>
+    <pre>
+         _______  __   __  _______    ___   _  _______  __   __  __   __  _______  __    _  ______     _______  ______    _______      ___  _______  _______  _______ 
+        |       ||  | |  ||       |  |   | | ||       ||  |_|  ||  |_|  ||   _   ||  |  | ||      |   |       ||    _ |  |       |    |   ||       ||       ||       |
+        |_     _||  |_|  ||    ___|  |   |_| ||   _   ||       ||       ||  |_|  ||   |_| ||  _    |  |    _  ||   | ||  |   _   |    |   ||    ___||       ||_     _|
+          |   |  |       ||   |___   |      _||  | |  ||       ||       ||       ||       || | |   |  |   |_| ||   |_||_ |  | |  |    |   ||   |___ |       |  |   |  
+          |   |  |       ||    ___|  |     |_ |  |_|  ||       ||       ||       ||  _    || |_|   |  |    ___||    __  ||  |_|  | ___|   ||    ___||      _|  |   |  
+          |   |  |   _   ||   |___   |    _  ||       || ||_|| || ||_|| ||   _   || | |   ||       |  |   |    |   |  | ||       ||       ||   |___ |     |_   |   |  
+          |___|  |__| |__||_______|  |___| |_||_______||_|   |_||_|   |_||__| |__||_|  |__||______|   |___|    |___|  |_||_______||_______||_______||_______|  |___|
+    </pre>
 <form name='myForm' method='get'>
-  <input type='text' name='cmd'>
-  <button onclick="return validateForm()">submit</button>
-</form>
+        <input type='text' name='cmd' autocomplete="off" autofocus>
+        <button onclick="return validateForm()">submit</button>
+      </form>
 </body>
 </html>
