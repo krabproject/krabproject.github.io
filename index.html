@@ -9,9 +9,9 @@ function validateForm() {
     return false;
   } else {
     event.preventDefault();
-
-    var tag = document.createElement("p");
-    var text = document.createTextNode(input); 
+    const firstNameInput = document.getElementsByTagName("input")
+    const tag = document.createElement("p");
+    const text = document.createTextNode(input); 
     tag.appendChild(text);
     var element = document.getElementsByTagName("body")[0];
     element.appendChild(tag);
