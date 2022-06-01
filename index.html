@@ -3,12 +3,12 @@
 <head>
 <script>
 function validateForm() {
-  let input = document.forms["myForm"]["fname"].value;
+  var input = document.forms["myForm"]["cmd"].value;
   if (input == "") {
-    alert("Name must be filled out");
+    alert("\n");
     return false;
   } else {
-    alert(input);
+    console.log("no refresh")
   }
 }
 </script>
@@ -17,9 +17,10 @@ function validateForm() {
 
 <h2>JavaScript Validation</h2>
 
-<form name="myForm" onsubmit="validateForm()" method="GET">
-  Name: <input type="text" name="fname">
-  <input type="submit" value="Submit">
+<form name='myForm' onsubmit='validateForm()' method='GET'>
+  Name: <input type='text' name='cmd'>
+  <button onclick="validateForm()">submit</button>
 </form>
+<p id="yes"></p>
 </body>
 </html>
