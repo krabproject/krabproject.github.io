@@ -1,21 +1,12 @@
 const express = require('express');
-const fs = require("fs");
-
 const app = express();
-const data = fs.readFileSync(__dirname + "/index.html", 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    console.log(data);
-  });
-  
-  
+const bodyParser = require('body-parser');
+const port = 2022;
 
-app.get('/', (req, res) => {
-  res.send(data);
-});
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-app.listen(3000, () => {
-  console.log('server started');
-});
+app.post('/register', (req, res) => {});
+    
+app.listen(port);
+console.log('See where it all happens at http://localhost:'+port);
