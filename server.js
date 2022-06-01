@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require("fs");
 
 const app = express();
-const data = fs.readFile(__dirname + "/index.html", 'utf8', (err, data) => {
+const data = fs.readFileSync(__dirname + "/index.html", 'utf8', (err, data) => {
   if (err) {
     console.error(err);
     return;
