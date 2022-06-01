@@ -9,12 +9,12 @@ function validateForm() {
     return false;
   } else {
     event.preventDefault();
-    const firstNameInput = document.getElementsByTagName("input").innerHTML = "";
     const tag = document.createElement("p");
     const text = document.createTextNode(input); 
     tag.appendChild(text);
     var element = document.getElementsByTagName("body")[0];
     element.appendChild(tag);
+    const firstNameInput = document.getElementsByTagName("input").innerHTML = "";
   }
 }
 </script>
