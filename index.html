@@ -51,23 +51,9 @@ button {
     opacity: 0;
 }
     </style>
+<script src="./main.js"></script>
 <script>
-    function validateForm() {
-    var input = document.forms["myForm"]["cmd"].value;
-    if (input == "") {
-      alert("no");
-      return false;
-    } else {
-      event.preventDefault();
-      const tag = document.createElement("p");
-      const text = document.createTextNode(input); 
-      tag.appendChild(text);
-      var element = document.getElementsByTagName("body")[0];
-      element.appendChild(tag);
-      document.querySelector('input').value=''
-      event.preventDefault();
-    }
-  }
+	event.preventDefault();
 </script>
 	<title>Kommand Line</title>
 </head>
