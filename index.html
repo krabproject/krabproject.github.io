@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./main.css">
-    <script src="./main.js"></script>
 <script>
-    function changeText2() {
+    function hist() {
         event.preventDefault();
-        const list = document.getElementById('demo');
+        const list = document.getElementById('hl');
         const shell = "root@krabcli $  "
-        const firstname =   document.getElementById('firstname').value;
+        const cmd =   document.getElementById('cmd').value;
         const entry = document.createElement('li');
         list.appendChild(entry);
-        entry.appendChild(document.createTextNode(shell + firstname));
-        document.getElementById('firstname').value = ''
+        entry.appendChild(document.createTextNode(shell + cmd));
+        document.getElementById('cmd').value = ''
     }
 </script>
 	<title>Krabcli</title>
@@ -34,11 +33,10 @@
 ██║  ██╗██║  ██║██║  ██║██████╔╝╚██████╗███████╗██║                                 
 ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝╚══════╝╚═╝
 </pre>
-<ul id="demo"></ul>
-<label for="firstname">root@krabcli $  </label>
+<ul id="hl"></ul>
 <form method="get">
-<input type="text" id="firstname" autofocus autocorrect="false">
-<button type="submit" onclick="return changeText2();"></button>
+    <label for="cmd"> > </label><input type="text" id="cmd" autofocus autocorrect="false">
+    <button type="submit" onclick="return hist();"></button>
 </form>
 </body>
 </html>

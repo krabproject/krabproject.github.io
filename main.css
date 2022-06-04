@@ -47,6 +47,10 @@ button {
    opacity: 0;
 }
 
+form {
+	display:flex;
+}
+
 ul {
    list-style-type:none;
    padding-left: 0pt;
