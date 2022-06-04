@@ -1,4 +1,4 @@
-body {
+html, body {
 	background-color: black;
 	background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
 	height: 100vh;
@@ -55,3 +55,32 @@ ul {
    list-style-type:none;
    padding-left: 0pt;
 }
+
+.banner {
+	background: #009579;
+  }
+  
+  .banner__content {
+	padding: 16px;
+	max-width: 500px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+  }
+  
+  .banner__text {
+	flex-grow: 1;
+	line-height: 1.4;
+	font-family: "Quicksand", sans-serif;
+  }
+  
+  .banner__close {
+	background: none;
+	border: none;
+	cursor: pointer;
+  }
+  
+  .banner__text,
+  .banner__close > span {
+	color: #ffffff;
+  }

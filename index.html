@@ -3,7 +3,14 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+    $(document).ready(function(){
+        $(".banner__close").click(function(){
+            $(".banner").fadeOut();
+        });
+    });
     function hist() {
         event.preventDefault();
         const list = document.getElementById('hl');
@@ -26,6 +33,10 @@
                 entry.appendChild(document.createTextNode("- github: redirects you to the official krabcli github profile"));
                 document.getElementById('cmd').value = ''
                 break;
+            case "github":
+                document.getElementById('cmd').value = ''
+                window.location.assign("https://github.com/krabcli/krabcli.github.io");
+                break;
             default:
                 list.appendChild(entry);
                 entry.appendChild(document.createTextNode(shell + `Error: command "${cmd}" not found.`));
@@ -37,6 +48,18 @@
 	<title>Krabcli</title>
 </head>
 <body>
+    <div class="banner">
+        <div class="banner__content">
+          <div class="banner__text">
+            <strong>Reminder:</strong> your subscription expires in 22 days. Renew to avoid account suspension.
+          </div>
+          <button class="banner__close" type="button">
+            <span class="material-icons">
+              close
+            </span>
+          </button>
+        </div>
+      </div>
     <pre>
 ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ████████╗ ██████╗ 
 ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔═══██╗
