@@ -17,7 +17,7 @@
                 break;
             case "help":
                 list.appendChild(entry);
-                entry.appendChild(document.createElement(shell + "Here is a list of the commands: - help: displays a list of commands.\n - clear: clear terminal of all previous output."));
+                entry.appendChild(document.createTextNode(shell + "Here is a list of the commands: - help: displays a list of commands.\n - clear: clear terminal of all previous output."));
                 document.getElementById('cmd').value = ''
             default:
                 list.appendChild(entry);
