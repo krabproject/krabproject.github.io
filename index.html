@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./main.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="C:\Users\Theo\krabcli.github.io\main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
-        $(".banner__close").click(function(){
-            $(".banner").fadeOut();
+        $(".close").click(function(){
+            $(".message").fadeOut();
         });
     });
     function hist() {
@@ -48,19 +48,12 @@
 	<title>Krabcli</title>
 </head>
 <body>
-    <div class="banner">
-        <div class="banner__content">
-          <div class="banner__text">
-            <strong>Reminder:</strong> your subscription expires in 22 days. Renew to avoid account suspension.
-          </div>
-          <button class="banner__close" type="button">
-            <span class="material-icons">
-              close
-            </span>
-          </button>
-        </div>
-      </div>
-    <pre>
+    <div class="message">
+        <p>Happy Pride Month!!&#127987;&#65039;&#8205;&#127752;</p>
+        <button class="close"><span class="material-symbols-outlined">close</span></button>
+    </div>
+<div class="content">
+<pre>
 ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗    ████████╗ ██████╗ 
 ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝    ╚══██╔══╝██╔═══██╗
 ██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗         ██║   ██║   ██║
@@ -80,5 +73,6 @@
     <label for="cmd"> > </label><input type="text" id="cmd" autofocus autocorrect="false">
     <button type="submit" onclick="return hist();"></button>
 </form>
+</div>
 </body>
 </html>

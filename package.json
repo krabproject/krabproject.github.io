@@ -2,7 +2,7 @@
   "name": "nodeshelljs.github.io",
   "version": "1.0.0",
   "nodemonConfig": {
-    "ext": "js,html"
+    "ext": "js,html,css"
   },
   "description": "",
   "main": "index.js",
