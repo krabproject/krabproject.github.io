@@ -10,9 +10,17 @@
         const shell = "root@krabcli $  "
         const cmd =   document.getElementById('cmd').value;
         const entry = document.createElement('li');
-        list.appendChild(entry);
-        entry.appendChild(document.createTextNode(shell + cmd));
-        document.getElementById('cmd').value = ''
+        switch (cmd) {
+            case "clear":
+                list.innerHTML = ""
+                document.getElementById('cmd').value = ''
+                break;
+            default:
+                list.appendChild(entry);
+                entry.appendChild(document.createTextNode(shell + `Error: command "${cmd}" not found.`));
+                document.getElementById('cmd').value = ''
+                break;
+        }
     }
 </script>
 	<title>Krabcli</title>
