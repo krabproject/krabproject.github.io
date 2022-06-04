@@ -5,7 +5,16 @@
     <link rel="stylesheet" href="./main.css">
     <script src="./main.js"></script>
 <script>
-    event.preventDefault();
+    function changeText2() {
+        event.preventDefault();
+        const list = document.getElementById('demo');
+        const shell = "root@krabcli $  "
+        const firstname =   document.getElementById('firstname').value;
+        const entry = document.createElement('li');
+        list.appendChild(entry);
+        entry.appendChild(document.createTextNode(shell + firstname));
+        document.getElementById('firstname').value = ''
+    }
 </script>
 	<title>Krabcli</title>
 </head>
