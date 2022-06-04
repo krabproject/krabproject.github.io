@@ -7,7 +7,7 @@
     function hist() {
         event.preventDefault();
         const list = document.getElementById('hl');
-        const shell = "root@krabcli $  "
+        const shell = "> "
         const cmd =   document.getElementById('cmd').value;
         const entry = document.createElement('li');
         switch (cmd) {
@@ -47,7 +47,7 @@
 </pre>
 <ul id="hl"></ul>
 <form method="get">
-    <label for="cmd">root@krabcli $  </label><input type="text" id="cmd" autofocus autocorrect="false">
+    <label for="cmd"> > </label><input type="text" id="cmd" autofocus autocorrect="false">
     <button type="submit" onclick="return hist();"></button>
 </form>
 </body>
