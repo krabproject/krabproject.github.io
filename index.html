@@ -3,19 +3,11 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
 <script>
-function changeText2() {
     event.preventDefault();
-    const list = document.getElementById('demo');
-    const shell = "root@krabcli $  "
-    const firstname =   document.getElementById('firstname').value;
-    const entry = document.createElement('li');
-    list.appendChild(entry);
-    entry.appendChild(document.createTextNode(shell + firstname));
-    document.getElementById('firstname').value = ''
-}
 </script>
-	<title>Kommand Line</title>
+	<title>Krabcli</title>
 </head>
 <body>
     <pre>

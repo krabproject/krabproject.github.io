@@ -1,15 +1,9 @@
-function validateForm() {
-    var input = document.forms["myForm"]["cmd"].value;
-    if (input == "") {
-      alert("no");
-      return false;
-    } else {
-      const tag = document.createElement("p");
-      const text = document.createTextNode(input); 
-      tag.appendChild(text);
-      var element = document.getElementsByTagName("body")[0];
-      element.appendChild(tag);
-      document.querySelector('input').value=''
-      event.preventDefault();
-    }
-  }
+function changeText2() {
+  const list = document.getElementById('demo');
+  const shell = "root@krabcli $  "
+  const firstname =   document.getElementById('firstname').value;
+  const entry = document.createElement('li');
+  list.appendChild(entry);
+  entry.appendChild(document.createTextNode(shell + firstname));
+  document.getElementById('firstname').value = ''
+}
