@@ -15,6 +15,10 @@
                 list.innerHTML = ""
                 document.getElementById('cmd').value = ''
                 break;
+            case "help":
+                list.appendChild(entry);
+                entry.appendChild(document.createElement(shell + "Here is a list of the commands: - help: displays a list of commands.\n - clear: clear terminal of all previous output."));
+                document.getElementById('cmd').value = ''
             default:
                 list.appendChild(entry);
                 entry.appendChild(document.createTextNode(shell + `Error: command "${cmd}" not found.`));
@@ -43,7 +47,7 @@
 </pre>
 <ul id="hl"></ul>
 <form method="get">
-    <label for="cmd"> > </label><input type="text" id="cmd" autofocus autocorrect="false">
+    <label for="cmd">root@krabcli $  </label><input type="text" id="cmd" autofocus autocorrect="false">
     <button type="submit" onclick="return hist();"></button>
 </form>
 </body>
