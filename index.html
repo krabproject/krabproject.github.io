@@ -17,8 +17,15 @@
                 break;
             case "help":
                 list.appendChild(entry);
-                entry.appendChild(document.createTextNode(shell + "Here is a list of the commands: - help: displays a list of commands.\n - clear: clear terminal of all previous output."));
+                entry.appendChild(document.createTextNode(shell + "Here is a list of the commands: "));
+                entry.appendChild(document.createElement("br"));
+                entry.appendChild(document.createTextNode("- clear: wipes the screen"));
+                entry.appendChild(document.createElement("br"));
+                entry.appendChild(document.createTextNode("- help: displays this menu"));
+                entry.appendChild(document.createElement("br"));
+                entry.appendChild(document.createTextNode("- github: redirects you to the official krabcli github profile"));
                 document.getElementById('cmd').value = ''
+                break;
             default:
                 list.appendChild(entry);
                 entry.appendChild(document.createTextNode(shell + `Error: command "${cmd}" not found.`));
