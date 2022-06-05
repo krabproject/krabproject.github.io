@@ -11,7 +11,7 @@ body {
 }
 
 .content {
-    padding: 2rem;
+    padding-left: 2rem;
 }
 
 body:hover {
@@ -27,11 +27,6 @@ body::after {
     height: 100vh;
     background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
     pointer-events: none;
-}
-
-::selection {
-    background: #0080ff;
-    text-shadow: none;
 }
 
 pre {
@@ -51,7 +46,6 @@ button {
 
 .message {
     padding-left: 50%;
-    display: flex;
     background-color: rgba(11, 240, 214, 0.875);
     font-size: 1.3rem;
 }
