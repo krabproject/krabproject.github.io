@@ -7,47 +7,17 @@ body {
     color: white;
     font: 1.5vw Inconsolata, monospace;
     text-shadow: 0 0 5px #c8c8c8;
-    display: flexbox;
-}
-
-.content {
-    padding-left: 2rem;
-}
-
-body:hover {
-    cursor: text;
-}
-
-body::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
-    pointer-events: none;
-}
-
-pre {
-    font-size: smaller;
-    align-self: left;
 }
 
 button {
-    border: none;
     background-color: transparent;
     outline: none;
+    border: none;
 }
 
-.material-symbols-outlined {
-    color: white;
-}
-
-.message {
-    padding-left: 50%;
-    background-color: rgba(11, 240, 214, 0.875);
-    font-size: 1.3rem;
+form,
+#typewriter {
+    padding-left: 2rem;
 }
 
 input {
@@ -56,20 +26,13 @@ input {
     font-size: inherit;
     color: rgb(240, 191, 129);
     background: transparent;
-    border: 0px;
+    border: none;
     outline: none;
-    /* no highlight on focus */
-    width: 100%;
-}
-
-form {
-    display: flex;
-    padding-left: 60px
 }
 
 ul {
     list-style-type: none;
-    padding-left: 0pt;
+    padding-left: 2rem;
 }
 
 a {
